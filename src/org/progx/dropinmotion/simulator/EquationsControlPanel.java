@@ -111,9 +111,11 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
     }
 
     private Component buildDebugControls() {
-        bouncerSimulator = new BouncerSimulator(bouncer);
+        //bouncerSimulator = new BouncerSimulator(bouncer);
+        //dropSimulator = new DropSimulator(bouncer);
+        bouncerSimulator = new BouncerSimulator(damping);
         dropSimulator = new DropSimulator(bouncer);
-        
+
         debugPanel = new JPanel(new GridBagLayout());
 
         JSlider slider;

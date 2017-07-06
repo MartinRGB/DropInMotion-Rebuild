@@ -15,7 +15,7 @@ import org.progx.dropinmotion.equation.AbstractEquation;
 
 public class BouncerSimulator extends AbstractSimulator {
     private static final Color COLOR_BACKGROUND = Color.WHITE;
-    private static final Color COLOR_GROUND = Color.DARK_GRAY;
+    private static final Color COLOR_GROUND = Color.PINK;
     private static final float STROKE_GROUND = 2.0f;
     private static final int SIZE_HASH = 20;
 
@@ -65,10 +65,10 @@ public class BouncerSimulator extends AbstractSimulator {
         g2.setStroke(new BasicStroke(STROKE_GROUND));
         g2.setColor(COLOR_GROUND);
 
-        for (int i = 0; i < width / SIZE_HASH; i++) {
-            g2.drawLine(x + i * SIZE_HASH, y + SIZE_HASH,
-                        x + (i + 1) * SIZE_HASH, y + 1);
-        }
+//        for (int i = 0; i < width / SIZE_HASH; i++) {
+//            g2.drawLine(x + i * SIZE_HASH, y + SIZE_HASH,
+//                        x + (i + 1) * SIZE_HASH, y + 1);
+//        }
         g2.drawLine(x, y, x + width, y);
         
         g2.setStroke(stroke);
