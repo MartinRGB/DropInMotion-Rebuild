@@ -18,14 +18,29 @@ public class BouncerSimulator extends AbstractSimulator {
     private static final Color COLOR_GROUND = Color.PINK;
     private static final float STROKE_GROUND = 2.0f;
     private static final int SIZE_HASH = 20;
+    private static int GREEN = 0;
+    private static int BLUE = 1;
+    private static int RED = 2;
+
 
     private BufferedImage image;
 
-    public BouncerSimulator(AbstractEquation equation) {
+    public BouncerSimulator(AbstractEquation equation,int colorInt) {
         super(equation);
         
         try {
-            image = ImageIO.read(BouncerSimulator.class.getResource("images/item.png"));
+            if(colorInt == GREEN){
+                image = ImageIO.read(BouncerSimulator.class.getResource("images/green.png"));
+            }
+
+            if(colorInt == BLUE){
+                image = ImageIO.read(BouncerSimulator.class.getResource("images/blue.png"));
+            }
+
+            if(colorInt == RED){
+                image = ImageIO.read(BouncerSimulator.class.getResource("images/red.png"));
+            }
+
         } catch (Exception e) { }
     }
 
@@ -65,6 +80,7 @@ public class BouncerSimulator extends AbstractSimulator {
         g2.setStroke(new BasicStroke(STROKE_GROUND));
         g2.setColor(COLOR_GROUND);
 
+//      绘制地平线
 //        for (int i = 0; i < width / SIZE_HASH; i++) {
 //            g2.drawLine(x + i * SIZE_HASH, y + SIZE_HASH,
 //                        x + (i + 1) * SIZE_HASH, y + 1);

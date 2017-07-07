@@ -18,12 +18,14 @@ import javax.swing.SwingUtilities;
 
 import org.progx.dropinmotion.physics.BouncerEquation;
 import org.progx.dropinmotion.physics.DampingOscillatorEquation;
+import org.progx.dropinmotion.physics.SpringEquartion;
 import org.progx.dropinmotion.simulator.PhysicsSetupFrame;
 import org.progx.dropinmotion.ui.HeaderPanel;
 
 public class DropInMotionDemo extends JFrame {
     private DampingOscillatorEquation damping;
     private BouncerEquation bouncer;
+    private SpringEquartion spring;
 
     public DropInMotionDemo() throws HeadlessException {
         super("Drop in Motion");
@@ -55,7 +57,7 @@ public class DropInMotionDemo extends JFrame {
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         if (setupFrame == null || !setupFrame.isDisplayable()) {
-                            setupFrame = new PhysicsSetupFrame(damping, bouncer);
+                            setupFrame = new PhysicsSetupFrame(damping, bouncer,spring);
                             setupFrame.setVisible(true);
                         } else {
                             setupFrame.toFront();
@@ -99,6 +101,7 @@ public class DropInMotionDemo extends JFrame {
     private void setupEquations() {
         damping = new DampingOscillatorEquation(1.0, 0.3, 0.058, 12.0, 0.0);
         bouncer = new BouncerEquation(1.0, 0.3, 0.058, 12.0, 0.0);
+        spring = new SpringEquartion();
     }
 
     public static void main(String[] args) {

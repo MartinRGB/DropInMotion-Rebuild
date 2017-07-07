@@ -13,21 +13,14 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-import javax.swing.JSlider;
-import javax.swing.SwingUtilities;
-import javax.swing.Timer;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import org.progx.dropinmotion.equation.EquationDisplay;
 import org.progx.dropinmotion.physics.BouncerEquation;
 import org.progx.dropinmotion.physics.DampingOscillatorEquation;
+import org.progx.dropinmotion.physics.SpringEquartion;
 
 
 public class EquationsControlPanel extends JPanel implements PropertyChangeListener {
@@ -37,14 +30,18 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
 
     private DampingOscillatorEquation damping;
     private BouncerEquation bouncer;
+    private SpringEquartion spring;
 
     private JLabel amplitudeLabel;
     private JLabel phaseLabel;
     private JLabel stiffnessLabel;
     private JLabel massLabel;
     private JLabel frictionLabel;
+    private JLabel springLabel;
 
+    private BouncerSimulator dampingSimulator;
     private BouncerSimulator bouncerSimulator;
+    private BouncerSimulator springSimulator;
     private DropSimulator dropSimulator;
 
     private JLabel timeLabel;
@@ -58,12 +55,14 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
     private int timeScale = 1;
     
     EquationsControlPanel(DampingOscillatorEquation damping,
-                          BouncerEquation bouncer) {
+                          BouncerEquation bouncer, SpringEquartion spring) {
         super(new BorderLayout());
         
         this.damping = damping;
         this.damping.addPropertyChangeListener(this);
         this.bouncer = bouncer;
+        this.spring = spring;
+        this.spring.addPropertyChangeListener(this);
 
         add(buildDebugControls(), BorderLayout.EAST);
         add(buildEquationDisplay(), BorderLayout.CENTER);
@@ -71,12 +70,14 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
     
     private Container buildEquationDisplay() {
         JPanel panel = new JPanel(new BorderLayout());
-        
+
+        //绘制顶部图表
         display = new EquationDisplay(0.0, 0.0,
                                       -0.2, 1.2, -1.2, 1.2,
                                       0.2, 5,
                                       0.5, 3);
         display.addEquation(damping, new Color(0.0f, 0.7f, 0.0f, 0.7f));
+        display.addEquation(spring,new Color(1.0f,0.f,0.f,0.7f));
 
         panel.add(display, BorderLayout.NORTH);
 
@@ -89,7 +90,7 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
                                            GridBagConstraints.HORIZONTAL, 
                                            new Insets(0, 0, 0, 0),
                                            0, 0));
-        wrapper.add(bouncerSimulator,
+        wrapper.add(dropSimulator,
                     new GridBagConstraints(0, 1,
                                            1, 1,
                                            1.0, 1.0,
@@ -97,14 +98,35 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
                                            GridBagConstraints.BOTH, 
                                            new Insets(0, 0, 0, 0),
                                            0, 0));
-        wrapper.add(dropSimulator,
-                    new GridBagConstraints(1, 1,
+        wrapper.add(dampingSimulator,
+                new GridBagConstraints(1, 1,
+                        1, 1,
+                        1.0, 1.0,
+                        GridBagConstraints.CENTER,
+                        GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0),
+                        0, 0));
+
+
+        wrapper.add(bouncerSimulator,
+                    new GridBagConstraints(2, 1,
                                            1, 1,
                                            1.0, 1.0,
                                            GridBagConstraints.CENTER,
-                                           GridBagConstraints.BOTH, 
+                                           GridBagConstraints.BOTH,
                                            new Insets(0, 0, 0, 0),
                                            0, 0));
+
+        wrapper.add(springSimulator,
+                new GridBagConstraints(3, 1,
+                        1, 1,
+                        1.0, 1.0,
+                        GridBagConstraints.CENTER,
+                        GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0),
+                        0, 0));
+
+
         panel.add(wrapper, BorderLayout.CENTER);
         
         return panel;
@@ -113,20 +135,27 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
     private Component buildDebugControls() {
         //bouncerSimulator = new BouncerSimulator(bouncer);
         //dropSimulator = new DropSimulator(bouncer);
-        bouncerSimulator = new BouncerSimulator(damping);
+
+        dampingSimulator = new BouncerSimulator(damping,0);
+        bouncerSimulator = new BouncerSimulator(bouncer,1);
+        springSimulator = new BouncerSimulator(spring,2);
+
+
         dropSimulator = new DropSimulator(bouncer);
 
         debugPanel = new JPanel(new GridBagLayout());
 
         JSlider slider;
         JCheckBox checkBox;
-        
+
+
+        //点击开关bounce图表格绘制
         addEmptySpace(debugPanel, 6);
         checkBox = addDebugCheckBox(debugPanel, "Draw bounce curve", false);
         checkBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (((JCheckBox) e.getSource()).isSelected()) {
-                    display.addEquation(bouncer, Color.BLUE);
+                    display.addEquation(bouncer, new Color(0.0f, 0.0f, 1.0f, 0.7f));
                 } else {
                     display.removeEquation(bouncer);
                 }
@@ -195,7 +224,9 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
         timeSlider.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 final int value = ((JSlider) e.getSource()).getValue();
+                dampingSimulator.setTime(value/100.0);
                 bouncerSimulator.setTime(value / 100.0);
+                springSimulator.setTime(value/100.0);
                 dropSimulator.setTime(value / 100.0);
                 timeLabel.setText(Double.toString(value / 100.0));
             }
@@ -214,7 +245,24 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
 
         timeLabel = addDebugLabel(debugPanel, "Time:", Double.toString(bouncerSimulator.getTime()));
         timeScaleLabel = addDebugLabel(debugPanel, "Time Scale:", Integer.toString(bouncerSimulator.getTimeScale()) + " s");
-        
+
+
+        addEmptySpace(debugPanel, 6);
+        addSeparator(debugPanel, "SpringPhysics");
+
+
+        slider = addDebugSlider(debugPanel, "SpringFactor:", 10, 200, (int) (spring.getFactor() * 100));
+        slider.addChangeListener(new ChangeListener() {
+            public void stateChanged(ChangeEvent e) {
+                final int value = ((JSlider) e.getSource()).getValue();
+                spring.setFactor((float) value/100.0);
+            }
+        });
+
+        springLabel = addDebugLabel(debugPanel, "SpringFactor:", Double.toString(spring.getFactor()));
+
+
+
         JButton button;
         debugPanel.add(button = new JButton("Reset Animation"),
                        new GridBagConstraints(0, linesCount++,
@@ -309,6 +357,8 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
             massLabel.setText(evt.getNewValue() + " kg");
         } else if (DampingOscillatorEquation.PROPERTY_FRICTION_MULTIPLIER.equals(name)) {
             frictionLabel.setText(evt.getNewValue().toString());
+        } else if (SpringEquartion.PROPERTY_SPRINGFACTOR.equals(name)) {
+            springLabel.setText(evt.getNewValue().toString());
         }
     }
     
@@ -395,8 +445,13 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
             long elapsed = System.currentTimeMillis() - start;
             if (elapsed > DELAY_ANIMATION * timeScale) {
                 ((Timer) e.getSource()).stop();
+
+                dampingSimulator.setTime(1.0);
                 bouncerSimulator.setTime(1.0);
+                springSimulator.setTime(1.0);
+
                 dropSimulator.setTime(1.0);
+
 
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
@@ -408,7 +463,10 @@ public class EquationsControlPanel extends JPanel implements PropertyChangeListe
                 });
             } else {
                 double time = (double) elapsed / (double) (DELAY_ANIMATION * timeScale);
+
+                dampingSimulator.setTime(time);
                 bouncerSimulator.setTime(time);
+                springSimulator.setTime(time);
                 dropSimulator.setTime(time);
                 timeSlider.setValue((int) (time * 100));
             }

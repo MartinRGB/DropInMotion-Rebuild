@@ -23,6 +23,9 @@ import java.util.List;
 
 import javax.swing.JComponent;
 
+
+//绘制动画曲线到图表上
+
 public class EquationDisplay extends JComponent implements PropertyChangeListener {
     private static final Color COLOR_BACKGROUND = Color.WHITE;
     private static final Color COLOR_MAJOR_GRID = Color.GRAY.brighter();
