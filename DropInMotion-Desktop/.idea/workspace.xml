@@ -6,102 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60a4dd31-8c6f-4827-8389-0962168fb700" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/DropInMotion_Rebuild_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/DropInMotion-Rebuild.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/DropInMotion.jnlp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/dropinmotion-rebuild.app/Contents/Info.plist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/dropinmotion-rebuild.app/Contents/Java/dropinmotion-rebuild.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/dropinmotion-rebuild.app/Contents/MacOS/JavaAppLauncher" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/dropinmotion-rebuild.app/Contents/Resources/en.lproj/Localizable.strings" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DropInMotion-Rebuild.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MyApplication.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/intro.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/key/Project Structure1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/key/configuration.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/key/javasetting.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/key/project2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/DropInMotion_Rebuild_jar/DropInMotion-Rebuild.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/DropInMotionDemo$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/DropInMotionDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/DropInMotionDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/DropInMotionDemo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/DropInMotionDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/PlaygroundPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/PlaygroundPanel$Animation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/PlaygroundPanel$IconDragger.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/PlaygroundPanel$IconPicker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/PlaygroundPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/images/demo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/images/stock_exec-16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/demo/images/stock_stop-16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/AbstractEquation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/Equation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/EquationDisplay$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/EquationDisplay$DrawableEquation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/EquationDisplay$PanHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/EquationDisplay$PanMotionHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/EquationDisplay$ZoomHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/equation/EquationDisplay.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/BasicMotionBlurIcon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/BouncingIcon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/MotionBlurTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/MotionBlurTest$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/MotionBlurTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/RealisticMotionBlurIcon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/Test$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/Test$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/Test$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/Test$MovieComponent$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/Test$MovieComponent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/images/item.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/motionblur/images/motion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/physics/BouncerEquation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/physics/DampingOscillatorEquation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/physics/SpringEquartion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/shadow/ShadowFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/AbstractSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/BouncerSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/DropSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$Animation$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel$Animation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/EquationsControlPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/PhysicsSetupFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/images/blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/images/green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/images/item.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/images/red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/simulator/images/simulator.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DropInMotion-Rebuild/org/progx/dropinmotion/ui/HeaderPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/simulator/BouncerSimulator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/simulator/DropSimulator.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/demo/DropInMotionDemo.java" afterPath="$PROJECT_DIR$/src/org/progx/dropinmotion/demo/DropInMotionDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/physics/BouncerEquation.java" afterPath="$PROJECT_DIR$/src/org/progx/dropinmotion/physics/BouncerEquation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/physics/DampingOscillatorEquation.java" afterPath="$PROJECT_DIR$/src/org/progx/dropinmotion/physics/DampingOscillatorEquation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/physics/SpringEquartion.java" afterPath="$PROJECT_DIR$/src/org/progx/dropinmotion/physics/SpringEquartion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/simulator/EquationsControlPanel.java" afterPath="$PROJECT_DIR$/src/org/progx/dropinmotion/simulator/EquationsControlPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/progx/dropinmotion/simulator/PhysicsSetupFrame.java" afterPath="$PROJECT_DIR$/src/org/progx/dropinmotion/simulator/PhysicsSetupFrame.java" />
-    </list>
+    <list default="true" id="60a4dd31-8c6f-4827-8389-0962168fb700" name="Default" comment="" />
     <ignored path="DropInMotion-Desktop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -121,7 +26,7 @@
     <favorites_list name="DropInMotion-Desktop" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -164,8 +69,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -187,6 +90,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -644,11 +549,12 @@
       <updated>1499595964509</updated>
       <workItem from="1499595966207" duration="578000" />
       <workItem from="1499596666929" duration="52000" />
+      <workItem from="1499599924913" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="630000" />
+    <option name="totallyTimeSpent" value="673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="363" y="100" width="1179" height="951" extended-state="0" />
