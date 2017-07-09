@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DropInMotion-Desktop:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DropInMotion_Desktop_jar</output-path>
+    <root id="archive" name="DropInMotion-Desktop.jar">
+      <element id="module-output" name="DropInMotion-Desktop" />
+    </root>
+  </artifact>
+</component>
