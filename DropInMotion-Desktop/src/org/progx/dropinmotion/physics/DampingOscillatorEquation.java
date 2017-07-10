@@ -2,6 +2,10 @@ package org.progx.dropinmotion.physics;
 
 import org.progx.dropinmotion.equation.AbstractEquation;
 
+
+//Damping Harmonic Oscillator A.K.A DHO With Out Timing
+//Reference - https://en.wikipedia.org/wiki/Harmonic_oscillator
+
 public class DampingOscillatorEquation extends AbstractEquation {
     public static final String PROPERTY_AMPLITUDE = "amplitude";
     public static final String PROPERTY_PHASE = "phase";

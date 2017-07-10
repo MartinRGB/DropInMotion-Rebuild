@@ -7,10 +7,7 @@ import java.awt.HeadlessException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import org.progx.dropinmotion.physics.DampingOscillatorEquation;
-import org.progx.dropinmotion.physics.DropBouncerEquation;
-import org.progx.dropinmotion.physics.BouncerEquation;
-import org.progx.dropinmotion.physics.SpringEquartion;
+import org.progx.dropinmotion.physics.*;
 import org.progx.dropinmotion.ui.HeaderPanel;
 
 public class PhysicsSetupFrame extends JFrame {
@@ -18,14 +15,16 @@ public class PhysicsSetupFrame extends JFrame {
     private DropBouncerEquation dropbouncer;
     private SpringEquartion spring;
     private BouncerEquation bouncer;
+    private DHOEquation dho;
 
     public PhysicsSetupFrame(DampingOscillatorEquation damping,
-                             DropBouncerEquation dropbouncer, SpringEquartion spring, BouncerEquation bouncer) throws HeadlessException {
+                             DropBouncerEquation dropbouncer, SpringEquartion spring, BouncerEquation bouncer, DHOEquation dho) throws HeadlessException {
         super("Drop in Motion - Physics Setup");
         this.damping = damping;
         this.dropbouncer = dropbouncer;
         this.spring = spring;
         this.bouncer = bouncer;
+        this.dho = dho;
 
         add(buildHeader(), BorderLayout.NORTH);
         add(buildControlPanel(), BorderLayout.CENTER);
@@ -46,6 +45,6 @@ public class PhysicsSetupFrame extends JFrame {
     }
 
     private Component buildControlPanel() {
-        return new EquationsControlPanel(damping, dropbouncer,spring,bouncer);
+        return new EquationsControlPanel(damping, dropbouncer,spring,bouncer,dho);
     }
 }

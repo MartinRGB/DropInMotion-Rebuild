@@ -21,6 +21,7 @@ public class EquationSimulator extends AbstractSimulator {
     private static int GREEN = 0;
     private static int YELLOW = 1;
     private static int RED = 2;
+    private static int PURPLE = 3;
 
 
     private BufferedImage image;
@@ -39,6 +40,10 @@ public class EquationSimulator extends AbstractSimulator {
 
             if(colorInt == RED){
                 image = ImageIO.read(EquationSimulator.class.getResource("images/red.png"));
+            }
+
+            if(colorInt == PURPLE){
+                image = ImageIO.read(EquationSimulator.class.getResource("images/purple.png"));
             }
 
         } catch (Exception e) { }
