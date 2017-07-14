@@ -49,33 +49,46 @@ public class DHOEquation extends AbstractEquation {
 
 
     double preValue = 0;
-    double postValue;
+    double time = 0;
 
     public double compute(double x) {
 
 
-        //TODO
+        time += 1/60;
+
         double k = -stiffness;
         double b = -damping;
         double F_spring = k*(preValue - 1);
         double F_damper = b*velocity;
 
-        velocity = (F_spring + F_damper)/mass * x;
+        velocity += (F_spring + F_damper)/mass * 1/60 *x/100;
 
-        postValue = (1+velocity) * x/1000.;
-        preValue = postValue;
+        preValue += (velocity) * 1/60 *x/100;
 
-        return postValue;
+        return preValue;
 
-//        if(x>0 && Math.abs(velocity) < tolerance){
-//            mIsFinished = true;
+        //TODO
+
+
+//        if(time>0 && Math.abs(velocity) < tolerance){
 //
+//            return 1.0;
 //
 //
 //        }
 //        else {
-//            mIsFinished = false;
+//            double k = -stiffness;
+//            double b = -damping;
+//            double F_spring = k*(preValue - 1);
+//            double F_damper = b*velocity;
+//
+//            velocity += (F_spring + F_damper)/mass * 1/60;
+//
+//            preValue += (velocity) * 1/60;
+//
+//            return preValue;
 //        }
+
 //
 //        if(mIsFinished){
 //            return 1;
